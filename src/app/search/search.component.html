@@ -1,19 +1,21 @@
-<div class="container mt-4">
+<div class="container mt-3">
     <div class="row">
-        <div class="col-9">
-            <h4>Github User Search</h4>
-            <form class="row">
-                <div class="col mt-1">
-                    <input name="username" type="search" class="form-control col-9" placeholder="github username">    
+        <div class="col">
+            <div class="card">
+                <div class="card-hearder bg-secondary text white">
+                    <h4>Github User Search</h4>
                 </div>
-                <div class="col">
-                    <input type="submit" value="Search" class="btn btn-primary btn-sm mt-2  col-3">
+                <div class="card-body">
+                    <form class="form-inline" >
+                        <div class="form-group">
+                            <input [(ngModel)]="searchUser" name="searchUser" size="40" type="search">
+                        </div>
+                        <div>
+                            <input (click)="searchButton()" type="Submit" value="Search" class="btn btn-secondary btn-sm">
+                        </div>
+                    </form>
                 </div>
-            </form>
-        
+            </div>
         </div>
-
-        <div class="col-3">sshhs</div>
-
     </div>
-</div>    
+</div>

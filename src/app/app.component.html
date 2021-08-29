@@ -1,5 +1,21 @@
-<h2 class="container bg-primary mt-3 p-3 text-light">Github Name Search</h2>
-<app-search></app-search><br><br>
-<app-user></app-user>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Github User Search</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          <a class="nav-link" routerLink="User">Search Users</a>
+          <a class="nav-link" routerLink="Repo">Search Repos</a>
+        </div>
+      </div>
+    </div>
+</nav> 
 
-<app-search-repos></app-search-repos>
+
+
+<!-- <h2 class="container bg-primary mt-3 p-3 text-light">Github Name Search</h2>
+<app-user></app-user> -->
+<router-outlet></router-outlet>

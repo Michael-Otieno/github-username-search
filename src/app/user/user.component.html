@@ -1,1 +1,8 @@
-<p>user works!</p>
+<app-search (searchEmitter)= getUser($event)></app-search>
+
+<div *ngFor='let profile of myProfile'>
+    <h1>GithubName:{{profile.login}}</h1>
+    <img src="{{profile.avatar_url}}" alt="">
+    <p></p>
+
+</div>
