@@ -1,16 +1,12 @@
-<div class="container mt-3">
-    <div class="row">
-        <div class="col">
-                <h4>Insert github username</h4>
-                <form class="row" >
-                    <div class="form-group col-8">
-                        <input [(ngModel)]="searchUser" class="form-control" name="searchUser" type="search">
-                    </div>
-                    <div class="col-3">
-                        <input (click)="searchButton()" type="Submit" value="Search" class="btn btn-secondary btn-sm">
-                    </div>
-                </form>
-                
+<div class="container mt-3"> 
+    <h4>Insert github username</h4>
+    <form class="row" >
+        <div class="form-group col-8">
+            <input [(ngModel)]="searchUser" class="form-control" name="searchUser" type="search">
         </div>
-    </div>
+        <div class="col-3">
+            <input (click)="searchButton()" type="Submit" value="Search" class="btn btn-secondary btn-sm">
+        </div>
+    </form>
+                    
 </div>
