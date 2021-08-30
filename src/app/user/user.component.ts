@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
     this.appService.getUser(searchUser).then(
       (success)=>{
         this.myProfile = this.appService.myProfile;
+        console.log(this.myProfile)
       }, 
       (error)=>{
         return error;

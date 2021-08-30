@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
 import { SearchReposComponent } from './search-repos/search-repos.component';
 import { HomeComponent } from './home/home.component';
+// import { AppServicesService } from './app-services.service';  
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [],   //
   bootstrap: [AppComponent]
 })
 export class AppModule { }

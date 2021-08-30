@@ -16,9 +16,10 @@ export class SearchReposComponent implements OnInit {
 
    //
    getRepo(searchUser: any){
-    this.appService.getRepo(searchUser).then(
+    this.appService.getRepo(searchUser).subscribe(
       (success)=>{
-        this.myRepo = this.appService.myRepos;//
+        this.myRepo = success;//
+        return (this.myRepo)
       }, 
       (error)=>{
         return error;
@@ -29,7 +30,7 @@ export class SearchReposComponent implements OnInit {
     
 
   ngOnInit(): void {
-    
+    this.getRepo('Michael-Otieno')
   }
 
 }

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { User } from './user';
 import { Repo } from './repo';//
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -49,24 +50,29 @@ export class AppServicesService {
 
   }
 
-  //get repo func
-  getRepo(searchUser:any){
-    interface data{
-      name: any;//
-      
-    }
-    return new Promise<void>((resolve, reject)=>{
-      this.myRepos = [];
-      this.http.get<data>(this.myToken + searchUser + '/repo' + this.token).toPromise().then(
 
-        (results) => {this.myRepos.push(results);
-          resolve();
-        },
-        (error)=>{
-          reject(error)
-        }
-      )
-    })
+  getRepo(searchUser:any):Observable<any>{
+    return this.http.get(this.myToken + searchUser + '/repos' + this.token)
   }
+
+  // //get repo func
+  // getRepo(searchUser:any){
+  //   interface data{
+  //     name: any;//
+      
+  //   }
+  //   return new Promise<void>((resolve, reject)=>{
+  //     this.myRepos = [];
+  //     this.http.get<data>(this.myToken + searchUser + '/repo' + this.token).toPromise().then(
+
+  //       (results) => {this.myRepos.push(results);
+  //         resolve();
+  //       },
+  //       (error)=>{
+  //         reject(error)
+  //       }
+  //     )
+  //   })
+  // }
 
 }
