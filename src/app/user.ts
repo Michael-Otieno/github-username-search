@@ -7,5 +7,6 @@ export class User {
     following: any;
     public_repos: any;
     url:any;
+    
 
 }
