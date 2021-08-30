@@ -1,5 +1,8 @@
 export class Repo {  
     name :any;
+    description: any;
+    url: any;
+    created_at: any;
 
 }
 
