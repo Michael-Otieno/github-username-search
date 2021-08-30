@@ -1,7 +1,11 @@
 <app-search (searchEmitter)= getRepo($event)></app-search>
-<div *ngFor='let reps of myRepo'appHighlight>
-    <h3 >Name: {{reps.name}}</h3>
-    <h5>{{reps.description}}</h5>
-    <h5>{{reps.url}}</h5>
-    <h5>{{reps.created_at | dateAgo}}</h5>
-</div>    
+<div class="pt-5 ps-2">
+    <h2>REPOSITORIES</h2>
+
+    <div *ngFor='let reps of myRepo'appHighlight class="pt-2">
+        <h3 >Name: {{reps.name}}</h3>
+        <h5>{{reps.description}}</h5>
+        <h5>{{reps.url}}</h5>
+        <h5>{{reps.created_at | dateAgo}}</h5>
+    </div>    
+</div>
