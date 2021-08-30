@@ -1,1 +1,4 @@
-<p>search-repos works!</p>
+<app-search (searchEmitter)= getRepo($event)></app-search>
+<div *ngFor='let reps of myRepo'>
+    <h1>Name{{reps.name}}</h1>
+</div>
