@@ -9,6 +9,8 @@ import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
 import { SearchReposComponent } from './search-repos/search-repos.component';
 import { HomeComponent } from './home/home.component';
+import { HighlightDirective } from './highlight.directive';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 // import { AppServicesService } from './app-services.service';  
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     SearchComponent,
     SearchReposComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,
