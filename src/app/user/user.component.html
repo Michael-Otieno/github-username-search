@@ -1,5 +1,17 @@
-
+<app-search (searchEmitter)= getUser($event)></app-search>
 <div *ngFor='let profile of myProfile' class="container-fluid mt-4 row">
+    <div class="col-7 ms-5 bg-secondary">
+      
+        <h2 class="text-decoration-underline pb-2 pt-4">Github Details</h2>
+        <h4><span class="fs-4 p-2">GithubName :</span>{{profile.login}}</h4>
+        <span class="fs-4 p-2 pb-3">Github Image: <br><img src="{{profile.avatar_url}}" alt="" width="60%" height="350px"></span>
+        <h4><span class="fs-6 mt-0">Followers :</span>{{profile.followers}}
+            <span class="fs-6 mt-0">Following :</span>{{profile.following}}
+        </h4>
+
+        <h4>Github Url: <span class="text-primary">{{profile.url}}</span></h4>
+        <h4>Public Repositories: {{profile.public_repos}}</h4>
+    </div>
     <div class="col-4 ms-5 ps-5">
         <img src="https://miro.medium.com/max/1400/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" alt="" height="200px" width="200px"/>
 
@@ -12,20 +24,6 @@
             source code management functionality of Git, plus its own features
         </p>
         <p class="lead pt-5">Enjoy fast way of searching github details</p>
-    </div>
-    <div class="col-7 mx-3 bg-secondary">
-        <app-search (searchEmitter)= getUser($event)></app-search>
-
-
-        <h2 class="text-decoration-underline pb-2 pt-4">Github Details</h2>
-        <h4><span class="fs-4 p-2">GithubName :</span>{{profile.login}}</h4>
-        <span class="fs-4 p-2 pb-3">Github Image: <br><img src="{{profile.avatar_url}}" alt="" width="60%" height="350px"></span>
-        <h4><span class="fs-6 mt-0">Followers :</span>{{profile.followers}}
-            <span class="fs-6 mt-0">Following :</span>{{profile.following}}
-        </h4>
-
-        <h4>Github Url: <span class="text-primary">{{profile.url}}</span></h4>
-        <h4>Public Repositories: {{profile.public_repos}}</h4>
     </div>
     
 </div>
