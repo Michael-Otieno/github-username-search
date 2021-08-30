@@ -32,6 +32,8 @@ export class AppServicesService {
       followers: any;
       following: any;
       public_repos: any;
+      url: any;
+    
     }
     return new Promise <void>((resolve, reject)=>{
       this.myProfile = [];

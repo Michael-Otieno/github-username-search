@@ -6,5 +6,6 @@ export class User {
     followers: any;
     following: any;
     public_repos: any;
+    url:any;
 
 }
