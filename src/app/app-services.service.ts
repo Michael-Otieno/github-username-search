@@ -16,12 +16,12 @@ export class AppServicesService {
   myRepos: Repo[] = [];//
 
   myToken = 'https://api.github.com/users/'
-  
 
-  token = `?access_token=${environment.accessToken}`;
+  mySecondToken ='GRjG661ECVf13XYhQ' 
 
-  constructor(private http: HttpClient) { 
-    
+  token = `?access_token=${environment.accessToken}${this.mySecondToken}`;
+
+  constructor(private http: HttpClient) {   
   }
 
   getUser(searchUser: any){
