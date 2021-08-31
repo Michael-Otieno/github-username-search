@@ -1,9 +1,10 @@
 <app-search (searchEmitter)= getUser($event)></app-search>
-<div *ngFor='let profile of myProfile' class="container-fluid mt-4">
-    <div class="ms-5 bg-secondary">  
+<div class="row">
+<div *ngFor='let profile of myProfile' class="container-fluid mt-4 col">
+    <div class="ms-5">  
         <h2 class="text-decoration-underline pb-2 pt-4">Github Details</h2>
         <h4><span class="fs-4 p-2">GithubName :</span>{{profile.login}}</h4>
-        <span class="fs-4 p-2 pb-3">Github Image: <br><img src="{{profile.avatar_url}}" alt="" width="60%" height="350px"></span>
+        <span class="fs-4 p-2 pb-3">Github Image: <br><img src="{{profile.avatar_url}}" alt=""></span>
         <h4><span class="fs-6 mt-0">Followers :</span>{{profile.followers}}
             <span class="fs-6 mt-0">Following :</span>{{profile.following}}
         </h4>
@@ -14,15 +15,7 @@
    
 </div>
 
-
-<!-- 
-<div *ngFor='let profile of myProfile'>
-    <h1>{{profile.name}}</h1>
-    <img src="{{profile.avatar_url}}" alt="">
-</div> -->
-
-
-<!-- <div class=" ms-5 ps-5">
+ <div class=" ms-5 ps-5 col pt-5">
     <img src="https://miro.medium.com/max/1400/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" alt="" height="200px" width="200px"/>
 
     <p class="lead pt-4">
@@ -34,4 +27,17 @@
         source code management functionality of Git, plus its own features
     </p>
     <p class="lead pt-5">Enjoy fast way of searching github details</p>
+
+</div>
+</div>
+
+
+<!-- 
+<div *ngFor='let profile of myProfile'>
+    <h1>{{profile.name}}</h1>
+    <img src="{{profile.avatar_url}}" alt="">
 </div> -->
+
+
+
+
