@@ -1,6 +1,6 @@
 .navlink-1{
-    background-color: grey;
-    border-radius: 10px;
+   
+    border-radius: 5px;
     color: white;
     margin: 5px;
    
@@ -9,12 +9,12 @@
     padding: 4px;
     background-color: black;
 }
-
 .navlink-2{
-    background-color: grey;
-    border-radius: 10px;
+   
+    border-radius: 5px;
     color: white;
     margin: 5px;
+   
 }
 .navlink-2:hover{
     padding: 4px;
@@ -22,10 +22,11 @@
 }
 
 .navlink-3{
-    background-color: grey;
-    border-radius: 10px;
+   
+    border-radius: 5px;
     color: white;
     margin: 5px;
+   
 }
 .navlink-3:hover{
     padding: 4px;
