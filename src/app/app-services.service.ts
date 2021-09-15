@@ -17,9 +17,16 @@ export class AppServicesService {
 
   myToken = 'https://api.github.com/users/'
 
-  mySecondToken ='GRjG661ECVf13XYhQ' 
 
-  token = `?access_token=${environment.accessToken}${this.mySecondToken}`;
+    // mySecondToken ='GRjG661ECVf13XYhQ'
+
+  // mySecondToken = 'xqRK9Ar1lv3GaRtN'
+  
+
+  // token =`?access_token=${environment.accessToken}${mySecondToken}`;
+  clientid = environment.clientId
+  clientsecret = environment.clientSecret
+  
 
   constructor(private http: HttpClient) {   
   }
@@ -36,9 +43,9 @@ export class AppServicesService {
       url: any;
     
     }
-    return new Promise <void>((resolve, reject)=>{
+     return new Promise <void>((resolve, reject)=>{
       this.myProfile = [];
-      this.http.get <data>(this.myToken + searchUser + this.token).toPromise().then(
+      this.http.get <data>(this.myToken + searchUser + "?client_id="+this.clientid+"&client_secret="+this.clientsecret).toPromise().then(
         (results)=>{this.myProfile.push(results);
           resolve();
         },
@@ -48,31 +55,29 @@ export class AppServicesService {
       )
     })
 
-  }
+    // return new Promise <void>((resolve, reject)=>{
+    //   this.myProfile = [];
+    //   this.http.get <data>(this.myToken + searchUser + this.token).toPromise().then(
+    //     (results)=>{this.myProfile.push(results);
+    //       resolve();
+    //     },
+    //       (error)=>{
+    //         reject(error);
+    //       }
+    //   )
+    // })
 
+  }
 
   getRepo(searchUser:any):Observable<any>{
-    return this.http.get(this.myToken + searchUser + '/repos' + this.token)
+    return this.http.get(this.myToken + searchUser + "/repos?client_id=" + this.clientid +"&client_secret="+this.clientsecret)
   }
 
-  // //get repo func
-  // getRepo(searchUser:any){
-  //   interface data{
-  //     name: any;//
-      
-  //   }
-  //   return new Promise<void>((resolve, reject)=>{
-  //     this.myRepos = [];
-  //     this.http.get<data>(this.myToken + searchUser + '/repo' + this.token).toPromise().then(
 
-  //       (results) => {this.myRepos.push(results);
-  //         resolve();
-  //       },
-  //       (error)=>{
-  //         reject(error)
-  //       }
-  //     )
-  //   })
+  // getRepo(searchUser:any):Observable<any>{
+  //   return this.http.get(this.myToken + searchUser + '/repos' + this.token)
   // }
+
+ 
 
 }
